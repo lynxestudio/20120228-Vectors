@@ -1,0 +1,64 @@
+using System;
+using VectorSpaces;
+
+namespace VectorSpaces
+{
+	class MainClass
+	{
+		public static void Main (string[] args)
+		{
+			Vector resp = null;
+			//Set of Vectors
+			double[] p = {4,12,20,28,36,44,52,60};
+			double[] q = {6,14,22,30,38,46,54,62};
+			double[] r = {8,16,24,32,40,48,56,64};
+			double[] s = {10,18,26,34,42,50,58,66};
+			//
+			double[] t = {0,0,0,0,0,0,0,0};
+			//
+			double[] u = {1,1,1,1,1,1,1,1};
+			//Set of scalars
+			double alpha = 3;
+			double beta = 6;
+			//Sum
+			Vector Px = new Vector(p);
+			Vector Qx = new Vector(q);
+			resp = Px + Qx;
+			Console.WriteLine("Px + Qx = ");
+			Console.WriteLine("{0} + {1} = {2};",Px.ToString(),Qx.ToString(),resp.ToString());
+			Console.WriteLine("|==================================|\n");
+			//A3
+			Vector Rx = new Vector(r);
+			Console.WriteLine("Px + (Qx + Rx) = (Px + Qx) + Rx =");
+			resp = Px + (Qx + Rx)
+			Console.WriteLine("{0} + ({1} + {2}) = {3}",Px.ToString(),Qx.ToString(),Rx.ToString(),resp.ToString());
+			Console.WriteLine("({0} + {1}) + {2} = {3}",Px.ToString(),Qx.ToString(),Rx.ToString(),resp.ToString());
+			Console.WriteLine("|==================================|\n");
+			//A5 (poner el -)
+			Vector Sx = new Vector(s);
+			resp = -Sx + Sx;
+			Console.WriteLine("-Sx + Sx =");
+			Console.WriteLine("-{0} + {1} = {2}",-Sx.ToString(),Sx.ToString(),resp);
+			Console.WriteLine("Sx + (-Sx) =")
+			resp = Sx + (-Sx);
+			Console.WriteLine("{0} + (-{1}) = {2}",Sx.ToString(),-Sx.ToString(),resp);
+			Console.WriteLine("Sx + (-Sx) = ",resp);
+			//S1
+			Console.WriteLine(" aPx = alpha * Px ="); 
+			resp = alpha * Px;
+			Console.WriteLine("{0} * {1} = {2}",alpha.ToStrintg(),Px.ToString(),resp.ToString());
+			Console.WriteLine("|==================================|\n");
+			//S3
+			
+			Console.WriteLine(" (Px + Sx)a = aPx + aSx");
+			Console.WriteLine("(Px + Sx)a =");
+			resp = (Px * Sx) * alpha;
+			Console.WriteLine("({0} + {1}) * {2}) = {3}",Px.ToString(),Sx.ToString(),alpha.ToString(),resp.ToString());
+			Console.WriteLine("aPx + aSX =");
+			resp = (alpha * Px) + (alpha * Sx);
+			Console.WriteLine("{0}*{1} + {0}{2}= {3}",alpha.ToString(),Px.ToString(),Sx.ToString(),resp.ToString());
+			
+			Console.ReadLine();
+		}
+	}
+}
