@@ -1,4 +1,4 @@
-# Sobrecarga de operadores en C# utilizando vectores
+# Sobrecarga de operadores en C# un ejemplo con vectores
 
 <p align="justify">
 Además de los operadores para los tipos primitivos, C# tiene una característica conocida como sobrecarga de operadores la cuál permite que los operadores para tipos primitivos puedan utilizarse con objetos, permitiéndonos definir el tipo de operación, como se va a efectuar, los tipos involucrados y valor que devuelve, un ejemplo típico de esta funcionalidad lo tenemos en la concatenación de objetos <b>String</b> en donde se utiliza el símbolo "+" para la concatenación de cadenas que igualmente es utilizado para la adicción de enteros, como se muestra en los siguientes ejemplos:
@@ -41,32 +41,20 @@ Para ejemplificar como funciona la sobrecarga de operadores en objetos utilizare
 <li>S5. 1v = v para cada v en V.</li>
 </ul><br />
 </p>
-<p align="justify">
-Ahora con estos conceptos pasemos al código, primeramente crearemos nuestra clase <b>Vector</b> en donde utilizando la palabra reservada <tt>operator</tt> definiremos las operaciones para demostrar algunos de los axiomas expuestos. A continuación el listado de dicha clase.<br />
-</p><br />
-<!--Code -->
-<div>
-    <img src="Vector.png" />
-    </div><br>
-<!--Code-->
-<p align="justify">Como vemos en este código utilizamos la sobrecarga de operadores utilizando la palabra clave <tt>operator</tt> en los siguientes métodos:<br />
-<pre>
-<br />public static Vector operator +(Vector u,Vector v)<br />
-public static Vector operator *(Vector u, Vector v)<br />
-public static Vector operator -(Vector u)<br />public static Vector operator *(double d,Vector v)<br />
-public static Vector operator *(Vector v,double d)<br />
+<p align="justify">Como vemos en este programa utilizamos la sobrecarga de operadores utilizando la palabra clave <tt>operator</tt> en los siguientes métodos:<br />
+<p>
+public static Vector operator +(Vector u,Vector v)
+public static Vector operator *(Vector u, Vector v)
+public static Vector operator -(Vector u)
+public static Vector operator *(double d,Vector v)
+public static Vector operator *(Vector v,double d)
 </pre>
-<br />Aquí definimos la operación, el número de parámetros con los que se llevará a cabo y por supuesto su implementación.<br />Ahora con el siguiente listado mostraremos la utilización de clase <b>Vector</b> y el uso de la sobrecarga de operadores para vectores de números reales:<br />
-<!--Code-->
-<div>
-    <img src="VectorMainClass.png" />
-    </div><br>
-<!--Code -->
+<br />Aquí definimos la operación, el número de parámetros con los que se llevará a cabo y por supuesto su implementación.<br />
 <br />Si agregamos estas clases a un proyecto de consola en MonoDevelop podemos tener una solución lista para corregir y compilar.<br />
 <div>
-    <img src="v1.png" width="777" height="429" />
+    <img src="images/v1.png" width="777" height="429" />
 </div><br>
-<br />Al ejecutar la solución, veremos el resultado como en la siguiente imagen:<br />
+<br />Al ejecutar el programa veremos el resultado como en la siguiente imagen:<br />
 <div>
-    <img src="v2.png" /></div><br>
+    <img src="images/v2.png" /></div><br>
 <br />
