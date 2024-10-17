@@ -49,11 +49,9 @@ public static Vector operator -(Vector u)
 public static Vector operator *(double d,Vector v)
 public static Vector operator *(Vector v,double d)
 </pre>
-<br />Aquí definimos la operación, el número de parámetros con los que se llevará a cabo y por supuesto su implementación.<br />
-<br />Si agregamos estas clases a un proyecto de consola en MonoDevelop podemos tener una solución lista para corregir y compilar.<br />
-<div>
-    <img src="images/v1.png" width="777" height="429" />
-</div><br>
+<p align="justify">
+Aquí definimos la operación, el número de parámetros con los que se llevará a cabo y por supuesto su implementación.
+</p>
 <br />Al ejecutar el programa veremos el resultado como en la siguiente imagen:<br />
 <div>
     <img src="images/v2.png" /></div><br>
