@@ -6,14 +6,18 @@ Además de los operadores para los tipos primitivos, C# tiene una característic
 <p align="justify">
 <br />Adicción de enteros<br />
 --------------------<br />
-int a = 18;<br />
-int b = 66;<br />
-Console.Write(a + b); //imprime 84 <br /><br />
-Concatenación de cadenas<br />
+<pre>
+int a = 18;
+int b = 66;
+Console.Write(a + b); //imprime 84
+Concatenación de cadenas
+</pre>
 -------------------------<br /><br />
-String s1 = "Once upon ";<br />
-String s2 = "a hero ";<br />
-Console.Write(s1 + s2); //imprime Once upon a hero<br />
+<pre>
+String s1 = "Once upon ";
+String s2 = "a hero ";
+Console.Write(s1 + s2); //imprime Once upon a hero
+</pre>
 </p>
 <p align="justify">
 Para ejemplificar como funciona la sobrecarga de operadores en objetos utilizaremos las operaciones con vectores que se estudian en el álgebra lineal, por lo que antes de codificar daremos algunas definiciones.
@@ -41,18 +45,24 @@ Para ejemplificar como funciona la sobrecarga de operadores en objetos utilizare
 <li>S5. 1v = v para cada v en V.</li>
 </ul><br />
 </p>
-<p align="justify">Como vemos en este programa utilizamos la sobrecarga de operadores utilizando la palabra clave <tt>operator</tt> en los siguientes métodos:<br />
+<p align="justify">
+Como vemos en este programa utilizamos la sobrecarga de operadores utilizando la palabra clave <tt>operator</tt> en los siguientes métodos:<br />
+</p>
 <p>
+<pre>
 public static Vector operator +(Vector u,Vector v)
 public static Vector operator *(Vector u, Vector v)
 public static Vector operator -(Vector u)
 public static Vector operator *(double d,Vector v)
 public static Vector operator *(Vector v,double d)
 </pre>
+</p>
 <p align="justify">
 Aquí definimos la operación, el número de parámetros con los que se llevará a cabo y por supuesto su implementación.
 </p>
-<br />Al ejecutar el programa veremos el resultado como en la siguiente imagen:<br />
+<p>
+Al ejecutar el programa veremos el resultado como en la siguiente imagen:
+</p>
 <div>
-    <img src="images/v2.png" /></div><br>
-<br />
+<img src="images/v2.png" />
+</div>
