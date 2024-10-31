@@ -11,37 +11,38 @@ double[] s = {10,18,26,34,42,50,58,66};
 double alpha = 3;
 Vector Px = new Vector(p);
 Vector Qx = new Vector(q);
-Console.WriteLine("Set of vectors:\n");
+Console.WriteLine("\tSet of vectors:\n");
 PrintArray("P",p);
 PrintArray("q", q);
 PrintArray("r", r);
 PrintArray("s", s);
-Console.WriteLine("\nscalar:\n");
+Console.WriteLine("\t\nscalar:\n");
 Console.WriteLine("a = 3");
-Console.WriteLine("\nOperations:\n");
-Console.WriteLine("A1) p + q = {0}", Px + Qx);
+Console.WriteLine("\t\nOperations:\n");
+Console.WriteLine("\tA1) p + q = {0}", Px + Qx);
 Console.WriteLine("\n");
 Vector Rx = new Vector(r);
-Console.WriteLine("A3) p + (q + r) = {0}",(Px + (Qx + Rx)).ToString());
-Console.WriteLine("    (p + q) + r = {0}",((Px + Qx) + Rx).ToString());
+Console.WriteLine("\tA3) p + (q + r) = {0}",(Px + (Qx + Rx)).ToString());
+Console.WriteLine("\t    (p + q) + r = {0}",((Px + Qx) + Rx).ToString());
 Console.WriteLine("\n");
 Vector Sx = new Vector(s);
-Console.WriteLine("A5) -s + s   = {0}",(-Sx + Sx).ToString());
-Console.WriteLine("    s + (-s) = {0}",(Sx + (-Sx)).ToString());
+Console.WriteLine("\tA5) -s + s   = {0}",(-Sx + Sx).ToString());
+Console.WriteLine("\t    s + (-s) = {0}",(Sx + (-Sx)).ToString());
 Console.WriteLine("\n");
-Console.WriteLine("S1) ap = {0} ",(alpha * Px).ToString());
+Console.WriteLine("\tS1) ap = {0} ",(alpha * Px).ToString());
 Console.WriteLine("\n");
-Console.WriteLine("S3) (p + s)a = {0}",((Px + Sx) * alpha).ToString());
-Console.WriteLine("    ap + as  = {0} ",((alpha * Px) + (alpha * Sx)).ToString());
+Console.WriteLine("\tS3) (p + s)a = {0}",((Px + Sx) * alpha).ToString());
+Console.WriteLine("\t    ap + as  = {0} ",((alpha * Px) + (alpha * Sx)).ToString());
+Console.WriteLine();
 Console.WriteLine("Press any key to continue...");
 Console.ReadKey(true);
 
 static  void PrintArray(string l,double[] doubleArray) 
 {
-    Console.Write("{0} = ", l);
+    Console.Write("\t{0} = ", l);
     for (int i = 0; i < doubleArray.Length; i++)
     {
-        Console.Write("{0} ",doubleArray[i]);
+        Console.Write("\t{0} ",doubleArray[i]);
         if (i == (doubleArray.Length - 1))
             Console.Write("\n");
     }
